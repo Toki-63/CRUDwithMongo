@@ -5,6 +5,11 @@ const registrationController = require('./Controllers/registrationController');
 const allUserController = require('./Controllers/allUserController');
 const deleteUserController = require('./Controllers/deleteUserController');
 const editUserController = require('./Controllers/editUserController');
+const loginController = require('./Controllers/loginController');
+const userAddressController = require('./Controllers/userAddressController');
+const addressController = require('./Controllers/addressController');
+
+
 
 app.use(express.json());
 
@@ -23,6 +28,9 @@ app.post('/registration',registrationController);
 app.get('/users', allUserController);
 app.delete('/deleteUser/:id',deleteUserController);
 app.post('/editUser/:id', editUserController);
+app.post('/login', loginController);
+app.post('/user/address', userAddressController);
+app.get('/address', addressController);
 
 
 app.listen(9000, () => {
