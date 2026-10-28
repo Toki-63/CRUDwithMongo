@@ -8,6 +8,8 @@ const editUserController = require('./Controllers/editUserController');
 const loginController = require('./Controllers/loginController');
 const userAddressController = require('./Controllers/userAddressController');
 const addressController = require('./Controllers/addressController');
+const forgotPasswordController = require('./Controllers/forgotPasswordController');
+const resetPasswordController = require('./Controllers/resetPasswordController');
 
 
 
@@ -29,6 +31,8 @@ app.get('/users', allUserController);
 app.delete('/deleteUser/:id',deleteUserController);
 app.post('/editUser/:id', editUserController);
 app.post('/login', loginController);
+app.post('/forgotPassword', forgotPasswordController);
+app.post('/resetPassword', resetPasswordController);
 app.post('/user/address', userAddressController);
 app.get('/address', addressController);
 
